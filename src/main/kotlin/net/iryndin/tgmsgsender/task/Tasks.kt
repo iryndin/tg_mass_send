@@ -21,7 +21,7 @@ class ClearInProgressStatusTask(
     private val messageSenderService: MessageSenderService
 ) {
     @Scheduled(fixedRate = 20_000)
-    fun sendMessages() {
+    fun clearStatuses() {
         messageSenderService.clearInProgressStatus()
     }
 }
