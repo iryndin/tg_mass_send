@@ -1,0 +1,20 @@
+server.port: 8088
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5433/tgms
+    username: tgmsapp
+    password: test123
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    show-sql: false
+    properties.hibernate.format_sql: true
+
+app:
+  tg.api.token: !!!!!!___REPLACE_ME___!!!!!!
+  tasks:
+    sendMsg:
+      users.limit: 40
+  sendMessage:
+    max.retry: 5
+    max.users: 200
